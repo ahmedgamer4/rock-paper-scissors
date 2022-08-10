@@ -5,28 +5,49 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'rock';
+    let cmp_score = 0;
+    let ply_score = 0;
+    
     if (computerSelection == playerSelection){
-        return 'Tie';
+        cmp_score += 0;
     }
     else if (computerSelection == 'rock' && playerSelection == 'paper'){
-        return 'You Win! paper beats rock';
+        ply_score++;
     }
     else if (computerSelection == 'paper' && playerSelection == 'scissors'){
-        return 'You Win! scissors beats paper';
+        ply_score++;
     }
     else if (computerSelection == 'scissors' && playerSelection == 'rock'){
-        return 'You Win! rock beats scissors';
+        ply_score++;
     }
     else if (computerSelection == 'scissors' && playerSelection == 'paper'){
-        return 'You Lose! scissors beats paper';
+        cmp_score++;
     }
     else if (computerSelection == 'rock' && playerSelection == 'scissors'){
-        return 'You Lose! rock beats scissors';
+        cmp_score++;
     }
     else{
-        return 'You Lose! paper beats rock'; 
+        cmp_score++;
     }
 
+    if (cmp_score > ply_score){
+        return 'You Lose!';
+    }
+
+    if (ply_score > cmp_score){
+        return 'You Win!';
+    }
 }
+
+
+
+function game(){
+    for (var i = 0; i < 5; i++){
+        var computerSelection = getComputerChoice();
+        var playerSelection = prompt('Enter your choice: ');
+        playerSelection = playerSelection.toLowerCase();
+        playRound(computerSelection, playerSelection);
+        document.getElementById('text').innerHTML = playRound(computerSelection, playerSelection);
+    }
+}
+game()
