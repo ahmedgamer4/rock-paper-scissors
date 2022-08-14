@@ -4,50 +4,32 @@ function getComputerChoice(){
     return rand;
 }
 
-function playRound(playerSelection, computerSelection){
+function playRound(){
     let cmp_score = 0;
     let ply_score = 0;
+    let buttons = document.querySelectorAll('button');
+    let button_name = "";
+    buttons.forEach(button => {
+        button.addEventListener('click', e => {
+            button_name = e.target.id;
+        });
+    });
+
     
-    if (computerSelection == playerSelection){
-        cmp_score += 0;
-    }
-    else if (computerSelection == 'rock' && playerSelection == 'paper'){
-        ply_score++;
-    }
-    else if (computerSelection == 'paper' && playerSelection == 'scissors'){
-        ply_score++;
-    }
-    else if (computerSelection == 'scissors' && playerSelection == 'rock'){
-        ply_score++;
-    }
-    else if (computerSelection == 'scissors' && playerSelection == 'paper'){
-        cmp_score++;
-    }
-    else if (computerSelection == 'rock' && playerSelection == 'scissors'){
-        cmp_score++;
-    }
-    else{
-        cmp_score++;
-    }
-
-    if (cmp_score > ply_score){
-        return 'You Lose!';
-    }
-
-    if (ply_score > cmp_score){
-        return 'You Win!';
-    }
 }
 
 
 
-function game(){
+/*function game(){
     for (var i = 0; i < 5; i++){
         var computerSelection = getComputerChoice();
-        var playerSelection = prompt('Enter your choice: ');
+        //var playerSelection = prompt('Enter your choice: ');
         playerSelection = playerSelection.toLowerCase();
         playRound(computerSelection, playerSelection);
         document.getElementById('text').innerHTML = playRound(computerSelection, playerSelection);
     }
+    playerSelection, computerSelection
 }
-game()
+game()*/
+
+playRound()
