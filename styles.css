@@ -1,0 +1,31 @@
+button{
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 7px;
+  border: solid #e65c4f;
+  background-color: #e65c4f;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+  color: #eaeff3;
+}
+
+.img{
+  width: 60px;
+  height: 60px;
+  background-color: #e65c4f;
+  color: #e65c4f;
+}
+
+body{
+  background-color: #33678a;
+}
+
+#container{
+    height: 700px;
+    margin: 100px;
+    display: flex;
+    align-items: flex-end;
+    border: solid black;
+    justify-content: space-around;
+}
