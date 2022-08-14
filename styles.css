@@ -19,13 +19,46 @@ button{
 
 body{
   background-color: #33678a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #container{
-    height: 700px;
+    height: 500px;
     margin: 100px;
     display: flex;
     align-items: flex-end;
-    border: solid black;
     justify-content: space-around;
+}
+
+#results{
+  display: flex;
+  justify-content: space-around;
+}
+
+#cmp_score, #ply_score{
+  width: 100px;
+  height: 100px;
+  background-color: #78a6c9;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #eaeff3;
+}
+
+#final_r{
+  width: 300px;
+  height: 100px;
+  color: #eaeff3;
+  background-color: #78a6c9;
+  margin: 0 auto;
+  margin-top: 270px;
+  margin-bottom: -270px;
+  border-radius: 7px;
+  font-size:  40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
